@@ -106,7 +106,7 @@ header {
   letter-spacing: 1;
   -webkit-transition: color 0.8s ease-in-out 0,
     letter-spacing 0.8s ease-in-out 0,
-    opacity 0.8s ease-in-out 0;;
+    opacity 0.8s ease-in-out 0;
   transition: color 0.8s ease-in-out 0,
     letter-spacing 0.8s ease-in-out 0,
     opacity 0.8s ease-in-out 0;
