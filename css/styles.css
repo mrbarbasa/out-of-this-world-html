@@ -104,6 +104,9 @@ header {
   opacity: 0.5;
   color: rgba(252, 252, 255, 0.9);
   letter-spacing: 1;
+  -webkit-transition: color 0.8s ease-in-out 0,
+    letter-spacing 0.8s ease-in-out 0,
+    opacity 0.8s ease-in-out 0;;
   transition: color 0.8s ease-in-out 0,
     letter-spacing 0.8s ease-in-out 0,
     opacity 0.8s ease-in-out 0;
@@ -183,6 +186,7 @@ nav ul#main_nav > li.has_dropdown > ul#sub_nav > li.nav_item {
 nav ul#main_nav > li.has_dropdown > ul#sub_nav {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
 }
 
