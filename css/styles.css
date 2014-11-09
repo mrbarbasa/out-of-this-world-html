@@ -1,3 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
 /*
   Color Scheme:
 
@@ -28,7 +80,7 @@ body {
 /* Header Styles */
 
 header {
-  width: 580px;
+  /*width: 580px;*/
   margin: 0 auto;
 }
 
@@ -57,17 +109,19 @@ header {
   font-size: 32px;
   text-align: center;
   letter-spacing: 1px;
-  margin-top: -40px;
   /*margin: 0 auto;*/
 }
 
 
 /* Main Nav Styles */
 
+#main_nav {
+  width: 860px;
+  margin: 0 auto;
+}
+
 #main_nav li {
   color: rgba(252, 252, 255, 0.9);
-  width: 500px;
-  margin: 0 auto;
   list-style-type: none;
   font-family: Arial, "Helvetica Neue", sans-serif;
 }
@@ -100,25 +154,31 @@ header {
 
 /* Sub Nav Styles */
 
-.nav_item:last-child {
-  position: relative;
+nav ul#main_nav > li {
+  /*border: 1px solid red;*/
+  width: 200px;
+  padding: 5px;
+  /* Because one of the children is a sub nav */
+  /* So we want it to retain height and width properties */
+  display: inline-block;
+  vertical-align: top;
 }
 
-#sub_nav {
+nav ul#main_nav > li.has_dropdown > ul#sub_nav > li.nav_item {
+/*  border: 1px solid red;*/
+  width: 200px;
+  padding: 5px;
+}
+
+nav ul#main_nav > li.has_dropdown > ul#sub_nav {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: -10%;
-  transition: all 0.5s ease 0s,
-    visibility 0s linear 0.5s;
+  transition: all 0.5s ease-in 0s;
 }
 
-.nav_item:last-child:hover #sub_nav {
+nav ul#main_nav > li.has_dropdown:hover > ul#sub_nav {
   visibility: visible;
   opacity: 1;
-  left: 0;
-  transition-delay: 0s;
 }
 
 
